@@ -1,74 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .button-container {
-            display: flex; /* Use flexbox to align children */
+   <head>
+      <meta charset="UTF-8">
+   </head>
+   <body>
+      <button class="Btn"></button>
+      <style>
+         html, body {
+            height: 100%; /* Ensure full height */
+            margin: 0; /* Remove default margin */
+         }
+         body {
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center vertically */
             justify-content: center; /* Center horizontally */
-            text-align: center; /* Center text for legacy browsers */
-            height: 100vh; /* Full height of the viewport */
-            align-items: center; /* Center vertically if needed */
-        }
-        button {
-            font-family: inherit;
-            font-size: 20px;
-            background: #ff8800;
-            color: white;
-            padding: 0.7em 1em;
-            padding-left: 0.9em;
-            display: inline-flex; /* Changed from flex to inline-flex */
+            background-color: #ffd277;
+         }
+         .Btn {
+            width: 140px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+            background-size: 250%;
+            background-position: left;
+            color: #ffd277;
+            position: absolute; /* Use absolute positioning */
+            top: 50%; /* Position at half the height of the parent */
+            left: 50%; /* Position at half the width of the parent */
+            transform: translate(-50%, -50%); /* Offset by half the width and height of the element */
+            display: flex;
             align-items: center;
             justify-content: center;
-            border: none;
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.2s;
             cursor: pointer;
-        }
-        button span {
-            display: block;
-            margin-left: 0.3em;
-            transition: all 0.3s ease-in-out;
-        }
-        button img { /* New style for the img tag */
-            width: 24px; /* Set the width of the image */
-            height: 24px; /* Set the height of the image */
-            transform-origin: center center;
-            transition: transform 0.3s ease-in-out;
-        }
-        button:hover .svg-wrapper {
-            animation: fly-1 0.6s ease-in-out infinite alternate;
-        }
-        button:hover img { /* Updated selector for the img tag */
-            transform: translateX(1.2em) rotate(45deg) scale(1.1);
-        }
-        button:hover span {
-            transform: translateX(5em);
-        }
-        button:active {
-            transform: scale(0.95);
-        }
-        @keyframes fly-1 {
-            from {
-                transform: translateY(0.1em);
-            }
-            to {
-                transform: translateY(-0.1em);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="button-container">
-        <button>
-            <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                    <img src="Soundcloud.webp" alt="Send Icon"> <!-- Replace with your PNG image path -->
-                </div>
-            </div>
-            <span>Listen Now!</span>
-        </button>
-    </div>
-</body>
+            transition-duration: 1s;
+            overflow: hidden;
+         }
+         .Btn::before {
+            position: absolute;
+            content: "LISTEN NOW!";
+            color: #ffd277;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 97%;
+            height: 90%;
+            border-radius: 8px;
+            transition-duration: 1s;
+            background-color: rgba(0, 0, 0, 0.842);
+            background-size: 200%;
+         }
+         .Btn:hover {
+            background-position: right;
+            transition-duration: 1s;
+         }
+         .Btn:hover::before {
+            background-position: right;
+            transition-duration: 1s;
+         }
+         .Btn:active {
+            transform: scale(0.95) translate(-50%, -50%); /* Maintain the centering when scaling */
+         }
+      </style>
+   </body>
 </html>
