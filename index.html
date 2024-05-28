@@ -7,7 +7,7 @@
       <div class="box">
          <span></span>
          <div class="content">
-            <h2>Hover me!</h2>
+            <a href="https://soundcloud.com/aiden-casanova/miserable-clear-audio?si=ba9669dcc76b490cb16a4baa4bad771b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="hover-me-button">LISTEN!🎶</a>
          </div>
       </div>
       <style>
@@ -130,7 +130,28 @@
          color: #fff;
          margin-bottom: 10px;
          }
+         .hover-me-button {
+         display: inline-block;
+         padding: 10px 20px;
+         font-size: 18px;
+         color: #fff;
+         background: linear-gradient(315deg, #ffbc00, #ff0058);
+         border: none;
+         border-radius: 8px;
+         text-decoration: none;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+         .hover-me-button:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+         }
+         /* Additional styles for the content container */
+         .box .content {
+         /* Existing styles */
+         /* ... */
+         flex-direction: column; /* Stack elements vertically */
+         }
       </style>
-      >
    </body>
 </html>
